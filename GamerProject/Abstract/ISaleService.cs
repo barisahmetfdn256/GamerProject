@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Game_Backend
 {
-    interface ISaleManager
+    interface ISaleService
     {
         void Sale(Game game, Gamer gamer);
 

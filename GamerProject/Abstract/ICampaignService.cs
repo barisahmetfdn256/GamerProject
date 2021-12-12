@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GamerProject.Abstract
 {
-    public interface ICampaignManager
+    public interface ICampaignService
     {
         public void Add(Campaign campaign);
         public void Delete(Campaign campaign);

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GamerProject.Abstract
 {
-    interface IGameManager
+    interface IGameService
     {
         void Add(Game game);
         void Delete(Game game);

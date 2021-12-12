@@ -6,7 +6,7 @@ using System.Text;
 
 namespace GamerProject.Concrate
 {
-    class SaleManager : ISaleManager
+    class SaleManager : ISaleService
     {
         public void Sale(Game game, Gamer gamer)
         {

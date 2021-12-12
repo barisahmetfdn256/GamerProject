@@ -6,7 +6,7 @@ using System.Text;
 
 namespace GamerProject.Concrate
 {
-    class CampaignManager : ICampaignManager
+    class CampaignManager : ICampaignService
     {
         List<Campaign> campaigns = new List<Campaign>();
         public CampaignManager()
