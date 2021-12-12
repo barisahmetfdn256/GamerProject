@@ -16,9 +16,8 @@ namespace GamerProject
                 DateOfBirth = new DateTime(2003, 5, 9),
                 FirstName = "Barış Ahmet",
                 LastName = "Fidan",
-               NationalityId = "0000000001"//TC KİMLİK NO
-
-            }) ;
+                NationalityId = "0000000001"//TC KİMLİK NO
+            });
             Console.ReadLine();
 
             Gamer gamer1 = new Gamer();
@@ -35,17 +34,30 @@ namespace GamerProject
             game1.GamePrice = 30;
             game1.GameCategory = "Simülasyon";
 
-            IGameManager gameManager = new GameManager();
-            gameManager.Add(game1);
-
             Game game2 = new Game();
             game2.GameId = 1;
             game2.GameName = "Resident Evil 7"; 
             game2.GamePrice = 90;
             game2.GameCategory = "FPS";
 
-            gameManager.Add(game2);
-            
+            Game[] games = new Game[] {game1 ,  game2 };
+            GameManager gamemang = new GameManager();
+            gamemang.Add(game1);
+            Console.WriteLine("    ");
+            gamemang.Add(game2);
+            Console.ReadLine();
+            foreach (var gaemn in gamemang.GettAll())
+            {
+                Console.WriteLine(gaemn.GameName);
+            }
+            Console.ReadLine();
+            gamemang.Delete(game1);
+            Console.ReadLine();
+            foreach (var gaemn in gamemang.GettAll())
+            {
+                Console.WriteLine(gaemn.GameName);
+            }
+            Console.ReadLine();
 
             Campaign campaign1 = new Campaign();
             campaign1.CampaignId = 1;
@@ -56,12 +68,26 @@ namespace GamerProject
             campaign2.CampaignId = 1;
             campaign2.CampaignName = "Cadılar Bayramı İndirimi";
             campaign2.Discount = 50;
-
-            ICampaignManager campaignManager = new CampaignManager();
-
-            campaignManager.Add(campaign1);
-            campaignManager.Add(campaign2);
             
+            Campaign[] camp = new Campaign[] { campaign1, campaign2 };
+            CampaignManager mang = new CampaignManager();
+            mang.Add(campaign1);
+            Console.ReadLine();
+            mang.Add(campaign2);
+            Console.ReadLine();
+            foreach (var caemn in mang.GetAll() )
+            {
+                Console.WriteLine(caemn.CampaignName);
+            }
+            Console.ReadLine();
+            mang.Delete(campaign2);
+            Console.ReadLine();
+            foreach (var caemn in mang.GetAll())
+            {
+                Console.WriteLine(caemn.CampaignName);
+            } 
+            mang.Delete(campaign1);
+
             Console.ReadLine();
             SaleManager saleManager = new SaleManager();
             Console.WriteLine("----------------");
@@ -71,11 +97,12 @@ namespace GamerProject
             saleManager.Sale(game2, gamer1, campaign2); //90TL-%50
             //saleManager.Sale(game2, gamer1);
 
-            //campaignManager.Delete(campaign1);
+            
             //gameManager.Delete(game1);
             Console.ReadLine();
-           
-            
+
+
+
 
 
 

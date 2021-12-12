@@ -26,6 +26,15 @@ namespace GamerProject.Concrate
             Console.WriteLine(game.GameName + " Adlı Oyun Başarıyla Silindi.");
         }
 
+        public List<Game> GettAll()
+        {
+            return games;
+            foreach (var game in games)
+            {
+                Console.WriteLine(game.GameName);
+            }
+        }
+
         public void Update(Game game)
         {
             Console.WriteLine(game.GameName + " Adlı Oyun Başarıyla Güncellendi.");

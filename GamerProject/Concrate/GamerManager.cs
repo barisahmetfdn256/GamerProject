@@ -12,7 +12,12 @@ namespace GamerProject
         {
             _userValidationService = userValidationService;
         }
-        public void Valdation (Gamer gamer)
+        List<Gamer> gamer = new List<Gamer>();
+        public GamerManager()
+        {
+
+        }
+            public void Valdation (Gamer gamer)
         {
             if (_userValidationService.Validate(gamer) == true)
             {
@@ -50,16 +55,8 @@ namespace GamerProject
 
         }
 
-        public void UpDate(Gamer gamer)
-        {
-            if (_userValidationService.Validate(gamer) == true)
-            {
-                Console.WriteLine("Oyuncu Güncellendi");
-            }
-            else
-            {
-                Console.WriteLine("Doğrulama Başarısız");
-            }
-        }
+       
+
+       
     }
 }

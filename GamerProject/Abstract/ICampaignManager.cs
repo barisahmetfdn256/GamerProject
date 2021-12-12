@@ -10,5 +10,8 @@ namespace GamerProject.Abstract
         public void Add(Campaign campaign);
         public void Delete(Campaign campaign);
         public void UpDate(Campaign campaign);
+        List<Campaign> GetAll();
+
+
     }
 }

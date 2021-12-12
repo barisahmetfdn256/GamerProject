@@ -7,7 +7,6 @@ namespace GamerProject
     interface IGamerManager
     {
         void Add(Gamer gamer);
-        void UpDate(Gamer gamer);
         void Dalete(Gamer gamer);
     }
 }

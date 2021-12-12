@@ -10,5 +10,6 @@ namespace GamerProject.Abstract
         void Add(Game game);
         void Delete(Game game);
         void Update(Game game);
+        List<Game> GettAll();
     }
 }

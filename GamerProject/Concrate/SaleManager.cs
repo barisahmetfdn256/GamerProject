@@ -21,7 +21,9 @@ namespace GamerProject.Concrate
             Console.WriteLine(game.GameName + " Oyunu " +
                 gamer.FirstName.ToUpper() + " " + 
                 gamer.LastName.ToUpper() + " Adlı Oyuncuya " + 
-                (game.GamePrice - (game.GamePrice * campaign.Discount) / 100) + " TL'ye satılmıştır.");
+                (game.GamePrice - (game.GamePrice * campaign.Discount) / 100) + " TL'ye satılmıştır." +
+                "Önceki Fiyat: " + game.GamePrice + "  Kazancınız: " + 
+                (game.GamePrice - (game.GamePrice - (game.GamePrice * campaign.Discount) / 100)));
         }
     }
 }
